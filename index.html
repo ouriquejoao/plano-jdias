@@ -489,6 +489,69 @@
                 position: absolute;
                 left: 0;
             }
+            
+            /* Tabela responsiva - transforma em cards no mobile */
+            .pricing-table {
+                overflow: visible;
+            }
+            
+            .pricing-table table {
+                display: none;
+            }
+            
+            .mobile-pricing-cards {
+                display: block !important;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Cards de pricing para mobile */
+        .mobile-pricing-cards {
+            display: none;
+            gap: 1.5rem;
+        }
+        
+        .mobile-pricing-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .mobile-pricing-card h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .mobile-pricing-card .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .mobile-pricing-card .price-row:last-child {
+            border-bottom: none;
+        }
+        
+        .mobile-pricing-card .price-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .mobile-pricing-card .price-value {
+            font-weight: 600;
+            color: var(--text);
         }
     </style>
 </head>
@@ -723,6 +786,137 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <!-- Versão Mobile (Cards) -->
+            <div class="mobile-pricing-cards">
+                <div class="mobile-pricing-card">
+                    <h4>Infraestrutura N8N (Cloudfy)</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">R$ 200 (único)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value">R$ 0</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-critical">🔴 Crítica</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>Sincronização CRM → Planilha</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">R$ 350 - 600</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value">Incluído abaixo</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-critical">🔴 Crítica</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>Correção Split de Pagamento</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">R$ 350 - 500</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value">Incluído abaixo</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-critical">🔴 Crítica</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>Manutenção de Automações N8N</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">—</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value"><strong>R$ 300 - 500</strong></span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-critical">🔴 Crítica</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>IA Conversacional</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value"><strong>A consultar</strong></span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value"><strong>A consultar</strong></span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-critical">🔴 Crítica</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>Controle Despesas (NotebookLM)</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">R$ 0</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value">R$ 0</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-high">🟡 Alta</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>Onboarding Estruturado</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">R$ 0</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value">R$ 0</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-high">🟡 Alta</span>
+                    </div>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h4>Dashboard Tempo Real</h4>
+                    <div class="price-row">
+                        <span class="price-label">Setup:</span>
+                        <span class="price-value">R$ 350 - 500</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Mensal:</span>
+                        <span class="price-value">R$ 0</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Prioridade:</span>
+                        <span class="price-value priority-medium">🟠 Média</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="cards-grid" style="margin-top: 3rem;">
